@@ -1,0 +1,9 @@
+<% layout('layouts/boilerplate') -%>
+    <h1>All listings</h1>
+    <p>Find your perfect stay.</p>
+    <a href="/listings/new">Create new Listing</a>
+    <ul>
+        <% for (const listing of alllistings) { %>
+            <li><a href="/listings/<%= listing._id %>"><%= listing.title %></a></li>
+        <% } %>
+    </ul>
